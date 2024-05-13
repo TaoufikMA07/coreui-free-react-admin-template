@@ -50,12 +50,30 @@ const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
+
+//CRUD
+const Users = React.lazy(() => import('./views/CRUD/Users'))
+const Gare = React.lazy(() => import('./views/CRUD/Gare'))
+const Ligne = React.lazy(() => import('./views/CRUD/Ligne'))
+const Train = React.lazy(() => import('./views/CRUD/Train'))
+const Voiture= React.lazy(() => import('./views/CRUD/Voiture'))
+const Carte= React.lazy(() => import('./views/CRUD/Carte'))
+
+
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
-  { path: '/theme/typography', name: 'Typography', element: Typography },
+  { path: '/Users', name: 'Users', element: Users },
+  { path: '/Gare', name: 'Gare', element: Gare },
+  { path: '/Ligne', name: 'Ligne', element: Ligne },
+  { path: '/Train', name: 'Train', element: Train },
+  { path: '/Voiture', name: 'Voiture', element: Voiture },
+  { path: '/Carte', name: 'Carte', element: Carte },
+
+ { path: '/theme/typography', name: 'Typography', element: Typography },
   { path: '/base', name: 'Base', element: Cards, exact: true },
   { path: '/base/accordion', name: 'Accordion', element: Accordion },
   { path: '/base/breadcrumbs', name: 'Breadcrumbs', element: Breadcrumbs },
